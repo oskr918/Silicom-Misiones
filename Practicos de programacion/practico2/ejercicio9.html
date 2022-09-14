@@ -12,22 +12,20 @@
         <11. Debe calcular el promedio. Por último imprimir en pantalla si el valor de media es < 5
         “Reprobado”,  entre 6 y 8 “Aprobado” y si es mayor a 8 “Sobresaliente”*/
 
-        function calcularPromedio(cantidad){
-            var cantidad = prompt("ingrese la cantidad de notas");
-            var notas = [];
-            
-            for (let index = 1; index <= cantidad; index++) {
-                var nota = prompt("Escribe el valor de la nota")
-                if(nota >=0 && nota <11){
-                    notas.push(nota)
-                console.log(notas)
-                }else{
-                    console.log('Debes ingresar un numero del 0 al 10')
-                    index --
-                }
+        function calcularPromedio(nota1, nota2, nota3){
+            var promedio = (nota1 + nota2 + nota3) / 3
+            Math.ceil(promedio)
+
+            if(Math.ceil(promedio) > 8){
+                console.log('Sobresaliente')
+            }else if(Math.ceil(promedio) >= 6 && promedio <= 8){
+                console.log('Aprobado')
+            }else if(Math.ceil(promedio) <= 5){
+                console.log('Reprobado')
             }
+
         }
-        calcularPromedio(3)
+        calcularPromedio(6, 6, 1)
     </script>
 </body>
 </html>
