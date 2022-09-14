@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Escribir un script que muestre la posición de la primera vocal de un texto introducido por
+        teclado.Por ejemplo: perro = “e” es la letra Nº2 ; árbol = “a” es la letra Nº1.*/
+
+        var texto = prompt("Ingrese un")
+        var vocales = ["a","e","i","o","u"]
+        var vocalesEncontradas = []
+        //console.log(texto.indexOf("h"))//Me devuelve 0
+        //console.log(vocales[0])// me devuelve "a"
+        //console.log(texto.charAt(0))//me devuelve "h"
+        
+        for (let index = 0; index < texto.length; index++) {
+            for (let i = 0; i < vocales.length; i++) {
+                if(vocales[i]==texto.charAt([index])){
+                  vocalesEncontradas.push(vocales[i])
+                  console.log(`La vocal ${vocalesEncontradas[0]} ${texto.indexOf(vocalesEncontradas[0])}`)
+                }
+            }
+
+        }
+        
+        /*if(vocales[0]== texto.charAt([3])){
+            console.log("Hjj")
+        }*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!--Ejercicio 1:
+A partir del siguiente array que se proporciona: var valores = [verdadero, false, 2, "hola",
+"mundo", 3, char];
+1. Determinar cuál de los elementos de texto es mayor, es decir el que contenga más
+letras.
+2. Imprimir los elementos de menor a mayor cantidad de letras.
+3. Determinar el resultado de las cuatro operaciones matemáticas realizadas con los dos
+elementos numéricos.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var valores = [true, false, 2, "hola", "mundo", 3, "char"];
+        console.log(`El elemento con mas caracteres es: ${valores[4]} con ${valores[4].length} caracteres`)
+        console.log("orden de menor a mayor")
+        
+        console.log(`index 3 : ${valores[3]}`)
+        console.log(`index 6 : ${valores[6]}`)
+        console.log(`index 4 : ${valores[4]}`)
+        
+        var operador = prompt("ingresa un operador")
+
+        switch (operador) {
+            case "+":
+                var resultado = valores[2] + valores[5]
+                console.log(`El resultado de la suma es ${resultado}`)
+                break;
+            case "-":
+                var resultado = valores[2] - valores[5]
+                console.log(`El resultado de la suma es ${resultado}`)
+                break;
+            case "*":
+                var resultado = valores[2] * valores[5]
+                console.log(`El resultado de la multiplicacion es ${resultado}`)
+                break;
+            case "/":
+                var resultado = valores[2] / valores[5]
+                console.log(`El resultado de la division es ${resultado}`)
+                break;
+        
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>
