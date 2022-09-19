@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         /*Ejercicio 1:
@@ -18,28 +19,27 @@ letras.
 3. Determinar el resultado de las cuatro operaciones matemáticas realizadas con los dos
 elementos numéricos.*/
 
-        var valores = ["ver",false, 2, "hola", "mun", 3, "char"];
+        var valores = ["verdadero", false, 2, "hola", "mun", 3, "char"];
         var nuevosValores = []
 
-//Paso todos los elementos de tipo strings a un nuevo array
+        //Paso todos los elementos de tipo strings a un nuevo array
 
-        for (let index = 0; index < valores.length; index++) {
-            const element = valores[index];
-
-            if(typeof element == "string"){
-                nuevosValores.push(element)
+        valores.forEach((elementos)=>{
+        if(typeof elementos == "string"){
+            nuevosValores.push(elementos)
         }
-    }
+    })
+        //Encuentro el texto con mas letras
 
-//Encuentro el texto con mas letras
-let MenorMayor = nuevosValores.sort(function(a,b){return a.length - b.length})
+        let MenorMayor = nuevosValores.sort(function (a, b) { return a.length - b.length })
 
-console.log(`El strings con mas letras es: ${MenorMayor.slice(-1)}`)
-// Imprimo los elementos de menor a mayor
+        console.log(`El strings con mas letras es: ${MenorMayor.slice(-1)}`)
 
-console.log(MenorMayor)
+        // Imprimo los elementos de menor a mayor
 
-    var operador = prompt("ingresa un operador")
+        console.log(MenorMayor)
+
+        var operador = prompt("ingresa un operador")
 
         switch (operador) {
             case "+":
@@ -58,11 +58,12 @@ console.log(MenorMayor)
                 var resultado = valores[2] / valores[5]
                 console.log(`El resultado de la division es ${resultado}`)
                 break;
-        
+
             default:
 
                 break;
         }
     </script>
 </body>
+
 </html>
